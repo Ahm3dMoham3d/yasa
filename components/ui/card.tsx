@@ -22,7 +22,7 @@ export default function Card({
           objectFit: "cover",
         }}
       />
-      <div className="absolute top-0 start-0 end-0">
+      <div className="absolute top-0 start-0 end-0 bg-gradient-to-b from-black/30 rounded-md w-full h-full">
         <div className="p-4 md:p-5">
           <h3 className="text-4xl font-bold text-white">{title}</h3>
           <p className="mt-1 text-gray-800">{description}</p>

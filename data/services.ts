@@ -57,4 +57,27 @@ const data = [
   },
 ];
 
-export { data };
+const TransitServices = [
+  {
+    title: "Vessels Tolls Calculator",
+    slug: "vessels-tolls-calculator",
+    src: "/services/transit/1.webp",
+  },
+  {
+    title: "Yachts Tolls Calculator",
+    slug: "yachts-tolls-calculator",
+    src: "/services/transit/2.webp",
+  },
+  // {
+  //   title: "Marketing Policies & Toll Rebates",
+  //   slug: "marketing-policies-toll-rebates",
+  //   src: "/services/transit/3.webp",
+  // },
+  // {
+  //   title: "Tolls Table",
+  //   slug: "tolls-table",
+  //   src: "/services/transit/4.webp",
+  // },
+];
+
+export { data, TransitServices };

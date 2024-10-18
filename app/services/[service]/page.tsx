@@ -1,11 +1,10 @@
 import { data } from "@/data/services";
 import Image from "next/image";
-
+const services = data.filter((e) => e.slug !== "transit-services");
 export async function generateStaticParams() {
-  const paths = data.map((item) => ({
+  return services.map((item) => ({
     service: item.slug,
   }));
-  return paths;
 }
 
 export async function generateMetadata({
@@ -13,7 +12,7 @@ export async function generateMetadata({
 }: {
   params: { service: string };
 }) {
-  const pagedata = data.find((e) => e.slug === params.service);
+  const pagedata = services.find((e) => e.slug === params.service);
 
   return {
     title: pagedata
@@ -30,13 +29,16 @@ interface PageProps {
 }
 
 const ServicePage = async ({ params }: PageProps) => {
-  const pagedata = data.find((e) => e.slug === params.service) || {
-    title: "",
-    alt: "",
-    src: "",
-    slug: "",
-    description: "",
-  };
+  const pagedata = services.find((e) => e.slug === params.service);
+
+  if (!pagedata) {
+    return (
+      <div>
+        <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
+        <p className="text-xl">The requested service could not be found.</p>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -52,7 +54,7 @@ const ServicePage = async ({ params }: PageProps) => {
           }}
         />
       </div>
-      <p className="text-2xl mt-4">{pagedata.description}</p>
+      <p className="text-xl mt-4">{pagedata.description}</p>
     </div>
   );
 };

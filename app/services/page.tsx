@@ -13,7 +13,15 @@ export default function page() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 flex-row">
         {data.map((e, i) => {
           return (
-            <Link href={`/services/${e.slug}`} key={i}>
+            <Link
+              className={
+                e.slug === "transit-services"
+                  ? "lg:col-span-3 md:col-span-2"
+                  : ""
+              }
+              href={`/services/${e.slug}`}
+              key={i}
+            >
               <Card description="" title={e.title} img={e.src} />
             </Link>
           );

@@ -75,3 +75,6 @@
     scrollbar-width: none;
   }
 }
+html {
+  font-size: 18px; /* This will set the base size */
+}

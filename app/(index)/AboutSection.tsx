@@ -20,6 +20,10 @@ export default function AboutSection() {
           success!
         </p>
 
+        <Button asChild variant={"default"} className="mt-4 me-2">
+          <Link href={"about-us"}>Our work</Link>
+        </Button>
+
         <Button asChild variant={"outline"} className="mt-4">
           <Link href={"about-us/legal-information"}>Legal Information</Link>
         </Button>

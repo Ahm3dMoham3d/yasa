@@ -4,7 +4,7 @@ import Link from "next/link";
 import { TransitServices } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Transit Services | YASA International Marine Services",
+  title: "Transit Services",
   description:
     "Our Transit Services offer reliable and efficient transportation for both cargo and passengers across various marine routes. We ensure timely departures and arrivals, providing comprehensive logistics support to meet your specific needs. With a focus on safety and customer satisfaction, we strive to optimize your transit experience.",
 };

@@ -1,7 +1,13 @@
 import Card from "@/components/ui/card";
 import { data } from "@/data/services";
-
 import Link from "next/link";
+
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "YASA International Marine Services offers a full suite of marine logistics solutions tailored to meet the needs of our clients.",
+};
 
 export default function page() {
   return (

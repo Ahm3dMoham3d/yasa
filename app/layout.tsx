@@ -12,7 +12,10 @@ const font = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "YASA International Marine Services",
+  title: {
+    template: "%s | YASA International Marine Services",
+    default: "YASA International Marine Services",
+  },
   description:
     "YASA International Marine Services offers comprehensive solutions for marine logistics, including transit services, supply chain management, and custom clearance. Trust our expert team to ensure smooth operations and safety in every voyage.",
 };

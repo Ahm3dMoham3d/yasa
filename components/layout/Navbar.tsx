@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="hidden md:flex flex-grow justify-center space-x-8">
           {links.map((e, i) => (
             <Link
-              className={`text-xl  hover:text-foreground transition-colors ${
+              className={`text-lg  hover:text-foreground transition-colors ${
                 currentPath === e.to ? "text-foreground" : "text-foreground/60"
               }`}
               key={i}
@@ -52,7 +52,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Button asChild size={"lg"}>
+          <Button className="text-lg" asChild size={"default"}>
             <Link href={"contact-us"}>Contact Us</Link>
           </Button>
         </div>
@@ -100,7 +100,7 @@ export default function Navbar() {
           {links.map((e, i) => (
             <Link
               onClick={() => setMenuOpen((prev) => !prev)}
-              className={`text-xl hover:bg-primary hover:text-white transition-colors text-center w-full rounded-md py-2 ${
+              className={`text-lg hover:bg-primary hover:text-white transition-colors text-center w-full rounded-md py-2 ${
                 currentPath === e.to ? "bg-primary text-white" : ""
               } `}
               key={i}
@@ -112,8 +112,8 @@ export default function Navbar() {
           <Button
             asChild
             variant={"outline"}
-            className="text-xl w-full"
-            size={"lg"}
+            className="text-lg w-full"
+            size={"default"}
           >
             <Link
               onClick={() => setMenuOpen((prev) => !prev)}

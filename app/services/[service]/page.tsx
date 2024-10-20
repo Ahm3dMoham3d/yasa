@@ -15,9 +15,7 @@ export async function generateMetadata({
   const pagedata = services.find((e) => e.slug === params.service);
 
   return {
-    title: pagedata
-      ? `${pagedata.title} | YASA International Marine Services`
-      : "Service Not Found",
+    title: pagedata ? `${pagedata.title}` : "Service Not Found",
     description: pagedata
       ? pagedata.description
       : "Discover our marine services at YASA International.",

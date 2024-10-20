@@ -11,12 +11,17 @@ export default function Footer() {
       <div className="flex items-center gap-2 flex-wrap lg:justify-end">
         <div className="flex items-center gap-2">
           <Phone className="w-5 h-5" />
-          01111111111
+          +20 10 2601 2050
         </div>
 
         <div className="flex items-center gap-2">
           <Phone className="w-5 h-5" />
-          01111111111
+          +20 10 7005 0622
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Phone className="w-5 h-5" />
+          +20 10 3378 7227
         </div>
 
         <div className="flex items-center gap-2">

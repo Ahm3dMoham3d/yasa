@@ -9,7 +9,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { useOutsideClick } from "@/hooks/use-outside-click";
+
 export default function Navbar() {
   const currentPath = usePathname();
   const menuRef = useRef(null);
@@ -28,16 +28,15 @@ export default function Navbar() {
       title: "About Us",
     },
   ];
-  useOutsideClick(menuRef, () => setMenuOpen(false));
   return (
-    <nav className="max-w-[1440px] mx-auto p-4 w-full">
-      <div className="flex items-center justify-between">
+    <nav className='max-w-[1440px] mx-auto p-4 w-full'>
+      <div className='flex items-center justify-between'>
         <Link href={"/"}>
-          <Image width={150} height={150} alt="yasa_logo" src={logo} />
+          <Image width={150} height={150} alt='yasa_logo' src={logo} />
         </Link>
 
         {/* Links for larger screens */}
-        <div className="hidden md:flex flex-grow justify-center space-x-8">
+        <div className='hidden md:flex flex-grow justify-center space-x-8'>
           {links.map((e, i) => (
             <Link
               className={`text-lg  hover:text-foreground transition-colors ${
@@ -51,18 +50,18 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <Button className="text-lg" asChild size={"default"}>
+        <div className='hidden md:block'>
+          <Button className='text-lg' asChild size={"default"}>
             <Link href={"contact-us"}>Contact Us</Link>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className='md:hidden'>
           <Button
             ref={menuRef}
             onClick={() => setMenuOpen(!menuOpen)}
-            variant="ghost"
+            variant='ghost'
           >
             <div>
               {menuOpen ? (
@@ -71,7 +70,7 @@ export default function Navbar() {
                   animate={{ rotate: 180 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <X className="w-6 h-6" />
+                  <X className='w-6 h-6' />
                 </motion.div>
               ) : (
                 <motion.div
@@ -79,7 +78,7 @@ export default function Navbar() {
                   animate={{ rotate: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Menu className="w-6 h-6" />
+                  <Menu className='w-6 h-6' />
                 </motion.div>
               )}
             </div>
@@ -95,7 +94,7 @@ export default function Navbar() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="flex flex-col gap-4 items-center mt-2 md:hidden bg-primary/5 pb-4 pt-2 px-2 rounded-md"
+          className='flex flex-col gap-4 items-center mt-2 md:hidden bg-primary/5 pb-4 pt-2 px-2 rounded-md'
         >
           {links.map((e, i) => (
             <Link
@@ -112,7 +111,7 @@ export default function Navbar() {
           <Button
             asChild
             variant={"outline"}
-            className="text-lg w-full"
+            className='text-lg w-full'
             size={"default"}
           >
             <Link

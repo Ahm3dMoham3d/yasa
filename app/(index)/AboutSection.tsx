@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 min-h-[40svh]    gap-8'>
+    <div className="grid grid-cols-1 md:grid-cols-2 min-h-[40svh]    gap-8">
       <div>
-        <h1 className='text-4xl mb-4 font-bold'>
-          About <span className='text-primary'>YASA</span>
+        <h1 className="text-4xl mb-4 font-bold">
+          About <span className="text-primary">YASA</span>
         </h1>
 
         <p>
@@ -20,21 +20,21 @@ export default function AboutSection() {
           success!
         </p>
 
-        <Button asChild variant={"default"} className='mt-4 me-2'>
+        <Button asChild variant={"default"} className="mt-4 me-2">
           <Link href={"about-us"}>Our work</Link>
         </Button>
 
-        <Button asChild variant={"outline"} className='mt-4'>
-          <Link href={"about-us/legal-information"}>Legal Information</Link>
+        <Button asChild variant={"outline"} className="mt-4">
+          <Link href={"/legal-information"}>Legal Information</Link>
         </Button>
       </div>
 
-      <div className='relative w-full min-h-[200px] h-[30svh] md:h-[50svh]'>
+      <div className="relative w-full min-h-[200px] h-[30svh] md:h-[50svh]">
         <Image
-          className='rounded-md'
-          alt='Yasa_Ships'
+          className="rounded-md"
+          alt="Yasa_Ships"
           src={about_bg}
-          placeholder='blur'
+          placeholder="blur"
           fill
           style={{
             objectFit: "cover",

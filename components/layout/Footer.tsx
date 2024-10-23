@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="w-full max-w-[1440px] mx-auto p-4">
       <div className="grid gap-4 lg:grid-cols-4">
         <div className="flex flex-col" id="social">
-          <div>
+          <div className="mb-2">
             <Image width={150} height={150} alt="yasa_logo" src={logo} />
             <p className="mt-4 text-sm text-foreground/70">
               YASA International Marine Services offers comprehensive solutions
@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-auto ">
+          <div className="mt-auto">
             <Link
               className="text-foreground/65 hover:text-foreground transition-colors w-auto"
               href={"/legal-information"}

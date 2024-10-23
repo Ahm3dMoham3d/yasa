@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   },
   description:
     "YASA International Marine Services offers comprehensive solutions for marine logistics, including transit services, supply chain management, and custom clearance. Trust our expert team to ensure smooth operations and safety in every voyage.",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { data } from "@/data/services";
 import Image from "next/image";
+import Link from "next/link";
 const services = data.filter((e) => e.slug !== "transit-services");
 export async function generateStaticParams() {
   return services.map((item) => ({
@@ -53,6 +55,9 @@ const ServicePage = async ({ params }: PageProps) => {
         />
       </div>
       <p className="text-xl mt-4">{pagedata.description}</p>
+      <Button className="mt-4">
+        <Link href={"/contact-us"}>Request your service now</Link>
+      </Button>
     </div>
   );
 };
